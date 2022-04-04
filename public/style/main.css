@@ -1,0 +1,95 @@
+* {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 18px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.navBar {
+  background-color: skyblue;
+  height: 100px;
+  margin-bottom: 60px;
+}
+input {
+  float: left;
+}
+#sales {
+  border: solid 1px black;
+  background-color: #d9f0f6;
+  height: 35rem;
+  padding: 0px;
+  margin-top: -40px;
+}
+#price {
+  border: solid 1px black;
+  background-color: #d9f0f6;
+  text-align: right;
+}
+
+.btn btn-outline-secondary {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.priceTable {
+  margin-bottom: 0px;
+  float: left;
+  width: 25%;
+  font-size: 30px;
+}
+#selectbar {
+  margin-top: 40px;
+  text-align: left;
+}
+#postdata {
+  background-color: aquamarine;
+  font-size: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+th {
+  border: solid 1px black;
+}
+tr {
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+td {
+  border: solid 1px black;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0px;
+}
+input[type="image"] {
+  position: relative;
+  top: -60px;
+  width: 250px;
+  height: 250px;
+  margin-left: 815px;
+}
+.menu {
+  float: right;
+}
+.menu a {
+  color: black;
+}
+
+.priceTable {
+  margin-top: 10px;
+  margin-left: 150px;
+}
+
+.admin {
+  background-color: skyblue;
+}

@@ -1,0 +1,18 @@
+body {
+  background-color: #c3e7fa;
+}
+.sub {
+  display: inline;
+}
+.first,
+h1 {
+  color: rgb(1, 0, 2);
+}
+.first {
+  margin-top: 50px;
+  text-align: center;
+}
+.second {
+  margin: 20px;
+  text-align: left;
+}

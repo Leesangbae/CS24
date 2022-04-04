@@ -1,0 +1,86 @@
+/*reset*/
+* {
+  border: 0;
+  padding: 0;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 18px;
+}
+#log,
+li {
+  list-style: none;
+  float: left;
+}
+
+a {
+  text-decoration: none;
+}
+.wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+.clearfix {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#name {
+  display: block;
+  padding: 0;
+  padding-left: 15px;
+}
+#user {
+  margin-right: 10px;
+  margin-top: 10px;
+  float: right;
+}
+/*상단 메뉴바 css*/
+
+menu li,
+a {
+  color: black;
+}
+
+.manager_table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+th {
+  background: linear-gradient(to left, white, rgba(135, 207, 235, 0.37));
+  height: 40px;
+  table-layout: fixed;
+  border: solid 1px black;
+}
+
+.table_data {
+  background: linear-gradient(to left, white, rgba(135, 207, 235, 0.37));
+  width: 100%;
+  height: 40px;
+}
+#navbar {
+  float: right;
+}
+.container {
+  margin-right: 0px;
+}
+.na {
+  background-color: skyblue;
+  border: solid 1px black;
+}
+
+.tbcreate3 {
+  border: solid 1px black;
+}
+tr {
+  border: solid 1px black;
+}
+td {
+  border: solid 1px black;
+}
+thead {
+  border-top: solid 1px black;
+}
+tbody {
+  border-top: solid 1px black;
+}

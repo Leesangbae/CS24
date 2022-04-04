@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cctv</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+    />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/style/managerMain.css" />
+    <link rel="stylesheet" href="/style/div.css" />
+    <link rel="stylesheet" href="/style/home.css" />
+  </head>
+  <body>
+    <div class="na">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="navbar-header">
+              <img alt="Brand" src="../picture/CS (1).png" />
+            </div>
+          </div>
+          <div class="col-lg-4" id="user">
+            <ul id="log">
+              <li>
+                환영합니다 <strong><%=name%></strong> 님<strong> /</strong>
+              </li>
+              <li>
+                <a id="name" href="/managerPage/logout">로그아웃</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+              id="navbar"
+              class="navbar-collapse collapse"
+              aria-expanded="false"
+            >
+              <ul class="nav navbar-nav">
+                <!-- <button onclick="window.open('invention.html')">재고관리</button > -->
+                <li><a href="/managerPage">홈</a></li>
+                <li>
+                  <a href="/managerPage/inventory">재고관리</a>
+                </li>
+                <li>
+                  <a href="/managerPage/money">매출관리</a>
+                </li>
+                <li>
+                  <a href="/managerPage/sales">주문내역</a>
+                </li>
+                <li>
+                  <a href="/managerPage/cctv">cctv</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mainhome">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4">
+            <div style="margin: 20px">
+              <img src="../picture/1.jpg" alt="image" />
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="first">
+              <h1>CS24 관리자 페이지 입니다.</h1>
+            </div>
+            <div class="first">
+              <h2>CS24는 무인편의점입니다.</h2>
+            </div>
+            <div class="first">
+              <h3>이 페이지는 관리자 페이지로 이곳에서는 매장의 재고 정보</h3>
+            </div>
+            <div class="first">
+              <h3>
+                월,일 매출정보와 주문내역, CCTV와 매장 사진을 볼 수 있습니다.
+              </h3>
+            </div>
+            <div>
+              <img alt="Brand" src="../picture/CS (2).png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

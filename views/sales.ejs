@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cctv</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+    />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/style/managerMain.css" />
+    <link rel="stylesheet" href="/style/div.css" />
+  </head>
+  <body>
+    <div class="na">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="navbar-header">
+              <img alt="Brand" src="../picture/CS (1).png" />
+            </div>
+          </div>
+          <div class="col-lg-4" id="user">
+            <ul id="log">
+              <li>
+                환영합니다 <strong><%=name%></strong> 님<strong> /</strong>
+              </li>
+              <li>
+                <a id="name" href="/managerPage/logout">로그아웃</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div
+              id="navbar"
+              class="navbar-collapse collapse"
+              aria-expanded="false"
+            >
+              <ul class="nav navbar-nav">
+                <!-- <button onclick="window.open('invention.html')">재고관리</button > -->
+                <li><a href="/managerPage">홈</a></li>
+                <li>
+                  <a href="/managerPage/inventory">재고관리</a>
+                </li>
+                <li>
+                  <a href="/managerPage/money">매출관리</a>
+                </li>
+                <li>
+                  <a href="/managerPage/sales">주문내역</a>
+                </li>
+                <li>
+                  <a href="/managerPage/cctv">cctv</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form action="/managerPage/logout">
+    </form>
+    <div class="maindiv container-fulid">
+      <div class="row">
+        <div class="col-md-12 col-xs-11">
+          <div class="test3">
+            <div class="table-responsive" style="margin: 20px;">
+              <table class="manager_table">
+                <thead>
+                  <tr>
+                    <th>구매 시간</th>
+                    <th>총 가격</th>
+                    <th>구매 목록</th>
+                  </tr>
+                </head>
+                <tbody class="tbcreate3">
+        
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>          
+      </div>
+    </div>
+    <script>
+      window.onload = function(){
+        $.ajax({
+          url : "sales",
+          type : "post",
+          dataType : 'json',
+          async : true,
+          success : function(results){
+            for(var i = 0; i < results.length; i++){
+              var insertTr = "";
+
+              insertTr += "<tr class='table_data'>";
+              insertTr += "<td>" + results[i].salesdate + "</td>";
+              insertTr += "<td>" + results[i].salesprice +"</td>";
+              insertTr += "<td>" + results[i].salesproduct + "</td>";
+              insertTr += "</tr>";
+
+              $(".tbcreate3").append(insertTr);
+            }
+          },
+          error : function(){
+            alert("서버요청실패");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

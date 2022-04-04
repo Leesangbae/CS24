@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS24 관리자 페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/354885cafc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="title">
+                <i class="fab fa-pied-piper-square"></i>
+                <a href="/managerPage">CS24 관리자 페이지</a>
+            </div>
+            <div class="title">
+                <i class="fab fa-pied-piper-square"></i>
+                <a href="/">CS24 메인 페이지</a>
+            </div>
+            <div class="menu_bar">
+                <ul>
+                <% if(is_logined == false){ %>
+                    <li><a href="/managerPage/login">로그인</a></li>
+                    <li><a href="/managerPage/register">회원가입</a></li>
+                    <li><a href="/test">테스트</a></li>  
+                <% }else{ %>
+                    <li><%= name %> 님 환영합니다!</li>
+                    <li><a href="/managerPage/logout">로그아웃</a></li>  
+                    <li><a href="/managerPage/test">테스트</a></li> 
+                    <script>
+                        window.history.forward();
+                        function noBack() {
+                            window.history.forward();
+                        }
+                    </script>
+                <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
